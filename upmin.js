@@ -1,5 +1,5 @@
 $( function() {
-    $( "#tabs" ).tabs();
+    $( "#tabs" ).tabs({collapsible: true, active: false});
   } );
 function openForm() {
     document.getElementById("myForm").style.display = "block";
@@ -8,16 +8,16 @@ function closeForm() {
     document.getElementById("myForm").style.display = "none";
   }
   $( function() {
-    $( "#acadprograms" ).accordion();
+    $("#acadprograms").accordion({ header: "h3", collapsible: true, active: false });
   } );
   $( function() {
-    $( "#CHSS" ).accordion();
+    $("#CHSS").accordion({ header: "h4", collapsible: true, active: false});
   } );
   $( function() {
-    $( "#CSM" ).accordion();
+    $("#CSM").accordion({ header: "h4", collapsible: true, active: false });
   } );
   $( function() {
-    $( "#SoM" ).accordion();
+    $("#SoM").accordion({ header: "h4", collapsible: true, active: false });
   } );
   $( function() {
     var availableTags = [
