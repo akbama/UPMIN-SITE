@@ -1,0 +1,260 @@
+<html>
+<head>
+
+<title> Sign-Up</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
+<style>
+
+	@font-face {
+        font-family: Palatino;
+        src: url(Palatino.ttf);
+    }
+    @font-face {
+        font-family: Optima;
+        src: url(Optima.ttf);
+    }
+    body {
+        background-color: #EDF0F2;
+        align-items: center;
+    }
+    .mainbox{
+        width: 95%;
+        height: 100%;
+        background-color: FFFFFF;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+       
+
+    }
+    .schoolname {
+        font-size: 30px;
+        line-height: 1%;
+    }
+    #logo {
+        height: 105px;
+        width: 110px;
+        margin-top: 15px;
+        margin-left: 80px;
+        margin-right: 10px;
+        float: left;
+        z-index: -1;
+   }
+    #stress {
+        font-size: 40px;
+    }
+    .school {
+        text-align: left;
+        font-family: Optima;
+        color: 872728;
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .links a
+    {
+    	width: 20%;
+        float: left;
+        font-size: 20px;
+        color: #f1f1f1;
+        text-align: center;
+        padding: 25px;
+        text-decoration: none;
+        font-family: Palatino;
+        overflow:hidden;
+        top:50%;
+    }
+
+    .links
+    {
+    overflow: hidden;
+	background-color: #7B1113;
+	height:80px
+    }
+
+    .footer {
+	background-color: #7B1113;
+	padding: 10px;
+	text-align: center;
+	font-family:Optima;
+	color:#f1f1f1;
+	font-size: 15px;
+	}
+	.column {
+	float:left;
+	
+	font-family : Helvetica;
+	width :50%;
+}
+
+	.row:after {
+		content: "" ;
+		display: table;
+		clear: both;
+
+	}
+
+	label {
+		font-family:Tahoma;
+		color: #7B1113;
+		font-size: 20px;
+		margin-left: 30px;
+	}
+
+	input[type="date"], [type="number"],[type="text"]
+	{
+		 width: 50%;
+	  padding: 10px;
+	  margin: 20px 20px 20px 20px;
+	  display: inline-block;
+	  border: none;
+	  background: #fcd5c8;
+	  
+	  font-size: 20px;
+	  font-style:bold;
+	}
+
+	button
+	{
+	  width: 25%;
+
+	  padding: 10px;
+	  margin-right: 15px;
+	  margin-left:20px;
+	  border: none;
+	  background: #7B1113;
+	  text-align:center;
+	  font-size: 20px;
+	  font-style:bold;	
+	  color: white;
+	  font-family: Optima;
+	  float: center;
+	  position:absolute;
+	  border:5px;
+	  border-color:#CD7C1E;
+	  align-items: center;
+	}
+
+	input[type="checkbox"]
+	{
+	  display: inline-block;
+	  border: none;
+	  background: #fcd5c8;
+	  
+	  font-size: 20px;
+	  font-style:bold;
+	  font-family: Optima;
+	  font-color:#7B1113;
+
+	}
+
+	ul.ui-autocomplete {
+            color: #7B1113;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            background-color:#f1f1f1;
+            font-family:Palatino;
+            font-size: 20px;
+            background-size: 20px;
+        }   
+
+</style>
+
+</head>
+
+<body>
+
+<div class = mainbox>
+    <img id = logo src = uplogo.png>
+    
+    <div class = school>
+    <p class = schoolname><span id= stress>U</span>NIVERSITY OF THE <span id= stress>P</span>HILIPPINES <span id= stress>M</span>INDANAO </p>
+        <h3><i>Shaping minds that shape the nation</i></h3>
+    </div>
+
+    <div class = navbar>
+        <div class = links>
+                 
+            <a> Sign-Up Form <a>
+        </div>
+    </div>
+
+    <div class = "row">
+	<div class ="column">
+	
+		<input type="text" id="fname" placeholder="First Name"> <br>
+		<input type="text" id="mname" placeholder="Middle Name"> <br>
+		<input type="text" id="lname" placeholder="Last Name"> <br><br>
+		<label>Gender:</label>
+		<input type="checkbox" id="female">Female 
+		<input type="checkbox" id="male">Male
+
+	</div>
+
+	<div class ="column">
+		<input type ="date" id="bday" placeholder="Date of Birth"><br>
+		<input type="text"id ="tags" autocomplete="on" placeholder="Province"><br>
+		<input type="number" id ="yr" placeholder="Year Level"> <br><br>
+		<button onclick="save()">Submit</button>
+	</div>
+
+ 
+
+</div>
+
+
+</div>
+
+<div class = "footer">
+	<p> All rights reserved 2021 </p>
+
+</div>
+
+<script src="signup.js"> </script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+    var availableTags = [
+      "Agusan del Norte",
+      "Agusan del Sur",
+      "Basilan",
+      "Bukidnon",
+      "Camiguin",
+      "Cotabato",
+      "Davao de Oro",
+      "Davao del Norte",
+      "Davao del Sur",
+      "Davao Occidental",
+      "Davao Oriental",
+      "Dinagat Islands",
+      "Lanao del Norte",
+      "Lanao del Sur",
+      "Maguindanao",
+      "Misamis Occidental",
+      "Misamis Oriental",
+      "Sarangani",
+      "South Cotabato",
+      "Sultan Kudarat",
+      "Sulu",
+      "Surigao del Norte",
+      "Surigao del Sur",
+      "Tawi-Tawi",
+      "Zamboanga del Norte",
+      "Zamboanga del Sur",
+      "Zamboanga Sibugay"
+
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+
+</body>
+
+
+</html>
